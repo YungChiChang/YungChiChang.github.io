@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <style>
+    .profile-sidebar {
+        background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+    }
+    
+    .nav-pills .nav-link {
+        color: #6c757d;
+        border-radius: 10px;
+        padding: 12px 20px;
+        margin: 4px 0;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-pills .nav-link:hover {
+        background-color: #f8f9fa;
+    }
+    
+    .nav-pills .nav-link.active {
+        background-color: #fff;
+        color: #4158D0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .profile-header {
+        background: linear-gradient(135deg, #4158D0 0%, #C850C0 100%);
+        height: 150px;
+        border-radius: 15px;
+    }
+    
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        border: 4px solid #fff;
+        margin-top: -60px;
+        background-color: #fff;
+    }
+    
+    .settings-card {
+        border-radius: 15px;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
+    
+    .settings-card:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-switch .form-check-input {
+        width: 3em;
+        height: 1.5em;
+        margin-left: -3.5em;
+    }
+    
+    .activity-item {
+        border-left: 2px solid #e9ecef;
+        padding-left: 20px;
+        position: relative;
+    }
+    
+    .activity-item::before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #4158D0;
+        position: absolute;
+        left: -7px;
+        top: 5px;
+    }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我的 GitHub 個人網頁</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome (圖示庫) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- 🔹 導覽列 Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">作品集</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">聯絡方式</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🔹 主要內容 -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- 🔹 側邊欄 -->
+            <div class="col-md-3">
+                <div class="profile-sidebar">
+                    <img src="https://via.placeholder.com/120" class="profile-pic" alt="Profile Picture">
+                    <h3>你的名字</h3>
+                    <p>Web 開發者 & UI 設計師</p>
+                    <div class="nav flex-column nav-pills mt-3">
+                        <a href="#" class="nav-link active">主頁</a>
+                        <a href="#" class="nav-link">關於我</a>
+                        <a href="#" class="nav-link">作品展示</a>
+                        <a href="#" class="nav-link">聯絡方式</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🔹 內容區域 -->
+            <div class="col-md-9">
+                <div class="profile-header"></div>
+
+                <section id="projects" class="mt-4">
+                    <h2>作品集</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card settings-card p-3">
+                                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="作品 1">
+                                <h5 class="mt-2">作品 1</h5>
+                                <p>這是我的第一個專案...</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card settings-card p-3">
+                                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="作品 2">
+                                <h5 class="mt-2">作品 2</h5>
+                                <p>這是我的第二個專案...</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card settings-card p-3">
+                                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="作品 3">
+                                <h5 class="mt-2">作品 3</h5>
+                                <p>這是我的第三個專案...</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 🔹 聯絡方式 -->
+                <section id="contact" class="mt-4">
+                    <h2>聯絡方式</h2>
+                    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                    <p>GitHub: <a href="https://github.com/your-github-id" target="_blank">github.com/your-github-id</a></p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔹 頁尾 (Footer) -->
+    <footer>
+        <p>&copy; 2024 我的個人網站 | 版權所有</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
